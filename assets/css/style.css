@@ -108,7 +108,7 @@ nav li a
 	{
 		font-weight: lighter;
 		font-size: 2rem;
-		color:#008bcb;
+	  	color:#008bcb;
 	}
 .management
 	{
@@ -161,7 +161,7 @@ nav li a
 .accessible-img img
 	{
 		margin-top: 3rem;
-		width: 100%;	
+		max-width: 100%;	
 	}
 .business-success
 	{
@@ -242,13 +242,13 @@ nav li a
   		text-align: center;	
   		margin: 1rem 0.5rem;
   		background-color: #ffffff;
- 		width: 19%;
   		flex: 1;
   		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+
 			
 	}
 .plans li h4
@@ -275,6 +275,8 @@ nav li a
 		background: #008bcb;
     	color: #ffffff;	
     	transition: all 0.3s ease-in-out;
+    	flex-basis: 100px;
+    	
 	}
 .plan-list button:hover
 	{
@@ -296,16 +298,13 @@ nav li a
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+
 	}
 
 .footer-elements li
 	{
 		list-style: none;
-  		text-align: left;	
-		flex: 1;
-  		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap; 
+  		flex:1;
 		color: #7a7a7a;
 	}
 .about img
@@ -324,6 +323,7 @@ nav li a
 		text-decoration: none;
 		color: #7a7a7a;
 		margin-bottom: 0.8rem;
+		display: block;
 		transition: all 0.3s ease-in-out;
 	}
 .about a:hover
