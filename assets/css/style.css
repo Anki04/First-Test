@@ -19,8 +19,8 @@ body
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 100%;
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 header
 	{
@@ -41,42 +41,75 @@ header
 		align-items: center;
 		justify-content: space-between;
 	}
-.logo
+.nav-bar a img
 	{
 		padding: 1rem 0 1rem 0;
 	}
 
-nav li
+.nav-bar .navigation li 
 	{
 		display: inline-block;
 		color: #ffffff;
-	}
-
-nav li a
-	{
-		color: white;
-		text-decoration: none;
 		padding: 1rem 1rem;
+		text-decoration: none;
+		list-style:none;
+		font-weight: 300;
+		letter-spacing: 1px; 
 		transition: all 0.3s ease-in-out;
 	}
-.navigation a:hover
+.nav-bar .navigation li a
+	{
+		display: block;
+		text-decoration: none;
+		color:white;
+	}
+
+.nav-bar .login-buttons li 
+	{
+		color: white;
+		list-style:none;
+		text-decoration: none;
+		display: inline-block;
+		padding:1rem 0;
+		font-weight: 300;
+		letter-spacing: 1px; 
+
+	}
+.login-buttons li a
+	{
+		display: block;
+		text-decoration: none;
+		color:white;
+
+	}
+.navigation li a
+	{
+		transition: all 0.3s ease-in-out;
+	}
+.navigation li a:hover
 	{
 		color: #008bcb;
 	}
-.banner-caption
+.banner
 	{
-  		display: flex;
-  		justify-content: center;
-  		align-items: center;
-  		flex-direction: column;
-  		flex-wrap: nowrap;
-  		color: white;
-  		height: 35rem;
-		background: url("../images/banner-1.jpg");
-  		background-size: cover;
-  		background-repeat: no-repeat;
-  		background-position: center;
+		max-width: 100%;
+		height: auto;
+		position: relative;
 	}
+.banner-inner
+	{
+  		
+  		position: absolute;
+  		transform: translate(-50%, -50%);
+  		top:55%;
+  		left:50%;
+  		text-align: center;
+  		color:#ffffff; 
+  		font-size: 1rem;
+  		font-weight: 400;
+		letter-spacing: 1px; 
+  				
+  	}
 
 .banner-button
 	{
@@ -84,18 +117,20 @@ nav li a
 		background-color: #008bcb;
  		border: none;
   		color: white;
+  		font-weight: 400;
 		padding: 0.8rem 2rem;
 		text-align: center;
 		font-size: 1rem;
 		text-decoration: none;
-		margin-top: 1rem;
-		transition: all 0.3s ease-in-out;		
+		transition: all 0.3s ease-in-out;
+		display: inline-block;
+		margin-top: 1rem;		
 	}
 .banner-button:hover
 	{
 		background-color: #0379af;
 	}
-.seperator
+.border
 	{
 		border-bottom: 1px solid lightgrey;
 	}
@@ -106,9 +141,10 @@ nav li a
 	}
 .heading 
 	{
-		font-weight: lighter;
-		font-size: 2rem;
-	  	color:#008bcb;
+		font-size: 2.2rem;
+		color: #008bcb;
+		font-weight: 300;
+		letter-spacing: 2px;
 	}
 .management
 	{
@@ -118,11 +154,11 @@ nav li a
     	align-items: center;
     	align-content: center;
     }	
-.seperator:nth-child(odd) .management
+.border:nth-child(even) .management
 	{
 		flex-direction: row;
 	}
-.seperator:nth-child(even) .management
+.border:nth-child(odd) .management
 	{
 		flex-direction: row-reverse;
 	}
@@ -132,22 +168,23 @@ nav li a
 	}
 .management img
 	{
-		height: 25rem;
+		
 		margin-top: 3rem; 
 	}	
 .management h3
 	{
 		text-align: left;
-		font-size: 2rem;
+		font-size: 2.2rem;
 		color: #008bcb;
-		font-weight: lighter;		
+		font-weight: 300;
+		letter-spacing: 2px;		
 	}
 .management p
 	{
 		margin-top: 1rem;
 		text-align: left;
 		color: #7a7a7a;
-		font-weight: lighter;
+		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.5rem;
 	}
@@ -174,13 +211,12 @@ nav li a
 		margin-top: 3rem;
 		display: flex;
   		align-items: center;
-  		flex-direction: row;
-  		flex-wrap: nowrap;
+		flex-wrap: nowrap;
   		justify-content: space-between;
   		margin-bottom: 3rem;
 
 	}
-.controls
+	/*.controls
 	{
 		display: flex;
   		align-items: center;
@@ -190,36 +226,58 @@ nav li a
   		list-style: none;
   		margin-bottom: 2rem;
   		justify-content: space-between;
+  	}*/
+ .success-controls .list
+ 	{
+ 		list-style: none;
+ 		padding-left: 1rem;
+ 	}
+ .success-controls .list:first-child
+ 	{
+ 		padding-left: 0;
+ 	}
+ .success-controls .list:last-child
+ 	{
+ 		padding-right: 0;
+ 	}
+
+
+ 
+ .controls
+  	{
+  		position: relative;
+  		display: block;
+  		margin-bottom: 2rem;
   	}
 
 .controls img
   	{
-  		margin-top: -0.8rem;
+  		
+  		position: absolute;
+  		top:0;
+  		left:0;
   	}
 
- .controls .topic
-  	{
-  		font-size: 1rem;
-  	}
-.controls div:last-child
-	{
-		width: calc(100% - 55px);
-	}
 .controls p
   	{
   		font-size: 0.8rem;
   		color: #7a7a7a;
+  		margin-left: 3rem;
+  		font-weight: 300;
   	}
-
-.success-controls ul:last-child
+ .controls h6
   	{
-  		margin-right: 0;
+  		color: #7a7a7a;
+  		margin-left: 3rem;
+  		font-weight: 300;
+  		font-size: 1rem;
   	}
 
  .plan-bg
   	{
   		 background-color: #f9f9f9;
   	}
+ 
 .our-plan 
 	{
 		text-align: center;
@@ -245,7 +303,7 @@ nav li a
   		flex: 1;
   		display: flex;
 		flex-direction: column;
-		flex-wrap: wrap;
+		
 		justify-content: space-between;
 		align-items: center;
 
@@ -254,7 +312,21 @@ nav li a
 .plans li h4
 	{
 		color: #008bcb;
-		font-size:1.2rem;
+		font-weight: 400;
+  		font-size: 1.2rem;
+	
+	}
+.plans li p
+	{
+		color: #7a7a7a;
+  		font-weight: 300;
+  		font-size: 0.8rem;
+	
+	}
+.plans li p.clr
+	{
+		color: #008bcb;
+  		
 	
 	}
 .list-border
@@ -262,10 +334,12 @@ nav li a
 		border-bottom: solid 1px #e2e2e2;
 		padding: 1rem 0;		 
 	}
-.color
+.button-size
 	{
-		color: #008bcb;
+		display: flex;
+		width: 88%;
 	}
+
 		
 .plan-list button
 	{
@@ -275,7 +349,7 @@ nav li a
 		background: #008bcb;
     	color: #ffffff;	
     	transition: all 0.3s ease-in-out;
-    	flex-basis: 100px;
+    	flex-basis: 100%;
     	
 	}
 .plan-list button:hover
@@ -306,6 +380,8 @@ nav li a
 		list-style: none;
   		flex:1;
 		color: #7a7a7a;
+		
+	}
 	}
 .about img
 	{
@@ -313,17 +389,31 @@ nav li a
 	}
 .about h6
 	{
-		color: #008bcb;
+		
 		margin-bottom: 2rem;
-		font-size: 1rem;
-		font-weight: lighter;
+		color: #008bcb;
+		font-weight: 400;
+  		font-size: 1rem;
 	}
+.about p
+	{
+		font-weight: 300;
+  		font-size: 0.8rem;
+	}
+ .about .about-text
+	{
+		margin-top:2rem;
+		width:90%;
+	}
+
 .about a
 	{
 		text-decoration: none;
 		color: #7a7a7a;
 		margin-bottom: 0.8rem;
 		display: block;
+		font-weight: 300;
+  		font-size: 0.8rem;
 		transition: all 0.3s ease-in-out;
 	}
 .about a:hover
@@ -354,20 +444,27 @@ nav li a
 {
 	html
 	{
-		font-size:14px 
+		font-size:14px; 
 
 	}
-	.plans ul
+	.management img
 	{
-		width: 100%;
-		margin: 0;
-		margin-bottom: 1rem;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-items: center;
 		
-		
+		max-width: 50%;	
+	}
+	
+	.controls img
+	{
+		max-width: 17%;
+	}
+
+	.plan-list button img
+	{
+		width:20%;
+	}
+	.plan-list button
+	{
+		font-size: 0.7rem;
 	}
 
 }
